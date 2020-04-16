@@ -5,6 +5,8 @@ const todoRoute = require('./route/todo')
 const todoOrderby = require('./route/order')
 const app = express()
 
+const server_port=process.env.PORT||6565
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -16,7 +18,7 @@ app.use('/orderby',todoOrderby)
 
 db.sync()
   .then(() => {
-    app.listen(6565)
+    app.listen(server_port)
   })
   .catch((err) => {
     console.error(err)
