@@ -5,7 +5,7 @@ const todoRoute = require('./route/todo')
 const todoOrderby = require('./route/order')
 const app = express()
 
-const server_port=process.env.PORT||6565
+const server_port=process.env.PORT||3333
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
