@@ -19,6 +19,7 @@ app.use('/orderby',todoOrderby)
 db.sync()
   .then(() => {
     app.listen(server_port)
+    console.log("server started");
   })
   .catch((err) => {
     console.error(err)
